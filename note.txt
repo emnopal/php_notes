@@ -1,0 +1,3 @@
+NOTE:
+
+SuperGlobals and RegEx after OOP
