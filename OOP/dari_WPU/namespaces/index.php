@@ -137,6 +137,10 @@
     cukup tambahin \ di depan nama classnya.
     $obj_test = new \Person;
 
+    karena dengan kita kasih \ diawal class, artinya kita mengakses global namespace
+
+    kalo akses full namespace pake \namespace\classnya,
+
     Penjelasan:
     Pada dasarnya, tanpa mendeklarasikan namespace apapun,
     PHP sudah mengenal yang namanya global namespace.
@@ -150,6 +154,11 @@
 
     best practice:
     namain namespace nya sesuai dengan directory struktur file nya.
+
+    kalo di php, kalo function, variable, atau constant gaada di local, maka akan langsung dicari di global namespace.
+    kalo ada di local, maka akan langsung dipanggil di local namespace
+    kalo seandainya ada di local, trus mau dipanggil di global pake keyword \function() -> sama kaya class tadi
+    kalo class, kalo gaada di lokal, bakal throw error
 
     */
 
@@ -169,7 +178,8 @@
     require_once 'App/Services/User.php';
 
     // custom name
-    // gak berlaku kalau pake overload
+    // gak berlaku kalau pake metode overload,
+    // karena kalo di overload itu nama class harus ada yang sama kaya nama file.php nya
     require_once 'App/Product/test.php';
 
     /*

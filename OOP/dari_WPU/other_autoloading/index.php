@@ -17,7 +17,8 @@ echo $cetakProduk->cetak();
 
 echo "<hr>";
 
-new Products\Coba;
+new Products\Coba; // kalo class Coba nya di comment, bakalan gabisa,
+                   // karena overloading harus ada nama class yang sama kaya nama file nya
 
 echo "<hr>";
 
