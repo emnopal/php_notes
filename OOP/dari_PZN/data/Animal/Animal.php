@@ -28,7 +28,7 @@ class Dog extends Animal{
 
 class Fish extends Animal{
     public function run(): void{
-        echo "Fish $this->name is swimming". PHP_EOL;
+        echo "Fish $this->name is swiming". PHP_EOL;
     }
     public function eat(AnimalFood $animalFood): void{
         echo "Fish $this->name is eating". PHP_EOL;
