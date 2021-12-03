@@ -48,7 +48,7 @@ trait All {
 }
 
 class Person extends ParentPerson{
-    use All;
+    use All; // all the method in ParentPerson will be overridden by this trait
     public function run(): void{
         echo "Person $this->name is running" . PHP_EOL;
     }

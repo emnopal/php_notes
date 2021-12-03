@@ -2,7 +2,7 @@
 
 class Person{
     const AUTHOR = "Me As The Greates Programmer lol";
-    var string $name;
+    var string $name; // var keyword is public by default in php
     var ?string $address = null; // nullable type bisa null atau string
     var string $country = "Indonesia";
 
