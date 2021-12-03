@@ -16,8 +16,8 @@ try { // if valid will continue execute
     echo "Login Error, Error Msg: {$e->getMessage()}". PHP_EOL;
     var_dump($e->getTrace());
     echo "to String exception: " .$e->getTraceAsString() . PHP_EOL;
-} finally {
-    echo "neither error or not, still executed!" . PHP_EOL;
+} finally { // either error or not, still executed!
+    echo "either error or not, still executed!" . PHP_EOL;
 }
 
 // example of valid

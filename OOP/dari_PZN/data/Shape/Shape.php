@@ -4,7 +4,6 @@ class Shape{
     public function getCorner(){
         return -1;
     }
-
 }
 
 class Rectangle extends Shape{

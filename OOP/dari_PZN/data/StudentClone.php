@@ -1,4 +1,4 @@
-<?php
+<?php namespace Data\StudentClone;
 
 class Student{
     public string $id;
@@ -11,7 +11,9 @@ class Student{
     }
 
     public function __clone(): void{
-        unset($this->sample);
+        // ketika clone object, maka sample akan di buang
+        // yang lainnya tetap di clone
+        unset($this->sample); // unset -> buang sample
     }
 
     public function __toString(): string{
@@ -23,7 +25,7 @@ class Student{
         echo "Invoke student with arguments $join" . PHP_EOL;
     }
 
-    public function __debugInfo(): array{
+    /*public function __debugInfo(): array{
         return [
             "id" => $this->id,
             "name" => $this->name,
@@ -32,5 +34,5 @@ class Student{
             "author" => "Me",
             "version" => "1.0.0"
         ];
-    }
+    }*/
 }

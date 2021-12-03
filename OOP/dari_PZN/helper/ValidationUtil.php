@@ -24,6 +24,8 @@ class ValidationUtil{
             throw new ValidationException("username is null");
         } else if (is_null($request->password)) {
             throw new ValidationException("password is null");
+        } else {
+            return true;
         }
     }
 
@@ -35,6 +37,8 @@ class ValidationUtil{
                 throw new ValidationException("$property->name is not set");
             } else if (is_null($property->getValue($request))) { // isnull checking for getValue() if value is null will raise exception
                 throw new ValidationException("$property->name is null");
+            } else {
+                echo "Reflection is Success";
             }
         }
     }

@@ -41,7 +41,7 @@
  */
 
 class MathHelper{
-    public static string $name = "MathHelper";
+    public static string $name = "MathHelperClass";
     public static function sum(int...$numbers): int {
         $total = 0;
         foreach ($numbers as $number) {
