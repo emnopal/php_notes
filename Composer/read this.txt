@@ -1,0 +1,25 @@
+jadi kalau mau buat project, apapun itu direkomendasikan untuk pake composer, 
+
+abis itu tinggal composer init aja di folder project nya
+
+trus pilih project aja, tapi klo mau library, metapackage atau composer-plugin terserah bebas, tapi kan rata2 buat project
+
+abis itu composer update, kalau mau install pake composer install
+
+gimana cara include library nya? pake autoload
+require_once __DIR__ . '/vendor/autoload.php';
+
+standar autoload:
+tambahin key "autoload" di composer.json
+abis itu tambahin lagi di dalam "autoload"
+abis itu tambahin "psr-4"
+abit itu tambahin lagi "NamaNamespace\\": "folder_to_load"
+nah terakhir jalanin composer dump-autoload
+
+kemudian aturan di composer, class harus sama namanya kaya nama filenya
+aturan nama namespace NamaNamespace\NamaFolder
+
+untuk nambahin library, pake require
+untuk nambahin library dev, pake require-dev
+
+abis nambahin library composer update abis itu composer dump-autoload

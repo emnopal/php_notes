@@ -1,0 +1,2 @@
+<?php
+$getComment = $repo->findAll();
